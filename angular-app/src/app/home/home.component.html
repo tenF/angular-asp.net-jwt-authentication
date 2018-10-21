@@ -1,0 +1,10 @@
+﻿<h1>Home</h1>
+<h2>Hi {{curUser.firstName + " " + curUser.lastName}}, welcome back!</h2>
+<p>You're logged in with Angular 6 and authenticated with JSON Web Token!</p>
+<div>
+    List of users on this site:
+    <ul>
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>
+<p><a [routerLink]="['/login']" (click)='logOut()'>Log Out</a></p>
